@@ -546,7 +546,7 @@ address {
 }
 
 .modal {
-    padding: 82px 24px 24px 24px;
+    padding: 72px 24px 24px 24px;
     width: 408px;
     min-height: 584px;
     border-radius: 4px;
@@ -586,16 +586,14 @@ address {
 .modal-btn:focus {
     background-color: #404bbf;
     border: none;
+    fill: #ffffff;
 }
 
 .modal-btn-icon-close {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn-icon-close:hover,
-.modal-btn-icon-close:focus {
-    fill: #ffffff;
-}
+
 
 .modal-title {
     color: #2E2F42;
@@ -605,7 +603,9 @@ address {
     letter-spacing: 0.32px;
     margin-bottom: 16px;
 }
-
+.modal-field {
+    margin-bottom: 8px;
+}
 
 .modal-input-name {
     width: 360px;
@@ -636,7 +636,7 @@ address {
 
 }
 
-.modal-input:focus+.modal-icon {
+.modal-input:focus {
     stroke: #4D5AE5;
 }
 
@@ -664,7 +664,9 @@ address {
     transform: translateY(-50%);
     fill: #4D5AE5;
 }
-
+.comment {
+    margin-bottom: 16px;
+}
 .model-text {
     width: 360px;
     height: 120px;
@@ -680,6 +682,7 @@ address {
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .modal-privacy-policy {
     margin-bottom: 24px;
@@ -715,7 +718,11 @@ address {
 .model-text:focus {
     border-color: #4D5AE5;
 }
-
+.modal-privacy-check:checked+.privacy-span {
+    background-color: #404bbf; 
+    border: none;
+    fill: #F4F4FD;;
+}
 .check-text a {
     color: #4D5AE5;
     text-decoration-line: underline;

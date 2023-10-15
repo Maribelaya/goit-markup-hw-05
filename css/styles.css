@@ -184,13 +184,6 @@ address {
     margin: 0 auto;
 }
 
-button {
-    display: block;
-    margin: 0 auto;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .title-header-btn {
     color: #FFF;
@@ -203,12 +196,14 @@ button {
     cursor: pointer;
     padding: 16px 32px;
     margin-top: 64px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.title-header-btn:hover {
-    background-color: #404BBF;
-}
-
+.title-header-btn:hover,
 .title-header-btn:focus {
     background-color: #404BBF;
 }
@@ -545,7 +540,7 @@ button {
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0; 
+    left: 0;
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -561,7 +556,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding-left: 24px;
     padding-right: 24px;
 }
@@ -574,18 +569,32 @@ button {
     width: 24px;
     height: 24px;
     top: 24px;
+    right: 24px;
     padding: 0;
     background-color: #E7E9FC;
     border-radius: 50%;
     position: absolute;
-    right: 24px;
-    top: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-bottom: 16px;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-btn-icon-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn-icon-close:hover,
+.modal-btn-icon-close:focus {
+    fill: #ffffff;
 }
 
 .modal-title {
@@ -597,38 +606,107 @@ button {
     margin-bottom: 16px;
 }
 
-.modal-input {
+
+.modal-input-name {
     width: 360px;
     height: 58px;
     border-radius: 4px;
-    border: 1px solid #4D5AE5;
     height: 40px;
     padding-left: 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-}
-.modal-input:focus {
-    
-}
-.modal-input:focus + .modal-icon {
-stroke: #4D5AE5;
-}
-.modal-label {
-    display: block;
-    margin-bottom: 8px;
+    border: rgba(46, 47, 66, 0.4);
+    background-color: transparent; 
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-input:focus {}
+
+.modal-input:focus+.modal-icon {
+    stroke: #4D5AE5;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+.modal-input-wrap {
+    position: relative;
+    margin-bottom: 16px;
+}
 .modal-icon {
     fill: transparent;
     stroke: #2E2F42;
     position: absolute;
     top: 50%;
+    left: 16px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(-50%);
+    fill: #4D5AE5;
 }
+
 .model-text {
     width: 360px;
-height: 120px;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 8px 16px; 
+    outline: transparent;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+}
+.visually-hidden {
+    stroke-width: 1px;
+stroke:  rgba(46, 47, 66, 0.40);
+}
+.check-text {
+    color:  #8E8F99;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+    display: flex;
+    align-items: center;
+    }
+.model-text:focus {
+    border-color: #4D5AE5;
+}
+
+.check-text a {
+    color: #4D5AE5;
+    text-decoration-line: underline;
+}
+.icon-checkbox {
+stroke-width: 1px;
+stroke: rgba(46, 47, 66, 0.40);
+}
+.modal-btn-sent {
+        color: #FFF;
+        background-color: #4D5AE5;
+        min-width: 169px;
+        height: 56px;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.04em;   
+        border: none;
+        border-radius: 4px;
+        padding: 16px 32px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -532,6 +532,10 @@ address {
 .footer-link:focus {
     background-color: #31D0AA;
 }
+
+.footer-subscribe {
+    margin-left: 80px;
+}
 .footer-text-subscribe {
     margin-bottom: 16px;
     font-weight: 500;
@@ -573,6 +577,7 @@ address {
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
+    letter-spacing: 0.04em;
 }
 .footer-btn-svg {
     margin-left: 16px;
@@ -763,7 +768,7 @@ address {
 .model-text:focus {
     border-color: #4D5AE5;
 }
-.modal-privacy-check:checked+.privacy-span span{
+.modal-privacy-check:checked span{
     background-color: #404bbf; 
     border: none;
     fill: #F4F4FD;;

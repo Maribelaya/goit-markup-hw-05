@@ -683,9 +683,9 @@ address {
     display: block;
     margin-bottom: 4px;
     font-size: 12px;
-    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    line-height: 1.17;
 }
 
 .modal-input-wrap {
@@ -735,6 +735,7 @@ address {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-right: 8px;
 }
 
 .check-text {
@@ -744,8 +745,7 @@ address {
     letter-spacing: 0.48px;
 }
 
-.modal-text:hover,
-.model-text:focus  {
+.modal-text:focus  {
     border-color: #4D5AE5;
 }
 
